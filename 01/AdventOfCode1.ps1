@@ -1,17 +1,17 @@
-﻿$file_input = Get-Content "$PSScriptRoot\caliorielves.txt"
+$file_input = Get-Content "$PSScriptRoot\caliorielves.txt"
 
-$elfarray = @()
+$ElfArray = @()
 
 foreach ($item in $file_input) {
-    $carriedcalories += $item
+    $CarriedCalories += $item
     if ($item -eq "") {
-        $elfarray += $carriedcalories
-        $carriedcalories = 0
+        $ElfArray += $CarriedCalories
+        $CarriedCalories = 0
     }
 }
 
-$sortedelves = $elfarray | sort -Descending
+$SortedElves = $ElfArray | Sort -Descending
 
-"The elf with the most calories has " + $sortedelves[0] + " calories"
+"`n The elf with the most calories has " + $SortedElves[0] + " calories `n" 
 
-"The top three has a total of " + ($sortedelves[0..2] | Measure-Object -sum).sum
+"The top three has a total of " + ($SortdElves[0..2] | Measure-Object -Sum).Sum + " calories `n"
