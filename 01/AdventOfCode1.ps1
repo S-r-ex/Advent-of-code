@@ -12,6 +12,6 @@ foreach ($item in $file_input) {
 
 $SortedElves = $ElfArray | Sort -Descending
 
-"`n The elf with the most calories has " + $SortedElves[0] + " calories `n" 
+"`nThe elf with the most calories has " + $SortedElves[0] + " calories `n" 
 
 "The top three has a total of " + ($SortdElves[0..2] | Measure-Object -Sum).Sum + " calories `n"
