@@ -14,4 +14,4 @@ $SortedElves = $ElfArray | Sort -Descending
 
 "`nThe elf with the most calories has " + $SortedElves[0] + " calories`n" 
 
-"The top three has a total of " + ($SortdElves[0..2] | Measure-Object -Sum).Sum + " calories`n"
+"The top three has a total of " + ($SortedElves[0..2] | Measure-Object -Sum).Sum + " calories`n"
